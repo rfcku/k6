@@ -1,0 +1,22 @@
+{
+  "name": "k6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc src/*.ts --outDir dist",
+    "test": "k6 run ./dist/*.js",
+    "loadTest": "k6 run ./dist/loadTest.js",
+    "stressTest": "k6 run ./dist/stressTest.js",
+    "soakTest": "k6 run ./dist/soakTest.js",
+    "spikeTest": "k6 run ./dist/spikeTest.js",
+    "enduranceTest": "k6 run ./dist/enduranceTest.js"
+  },
+  "dependencies": {
+    "@types/k6": "^0.42.0",
+    "k6": "^0.0.0",
+    "tsc": "^2.0.4",
+    "typescript": "^4.9.5"
+  }
+}
